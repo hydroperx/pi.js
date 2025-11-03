@@ -1,4 +1,4 @@
-# IntlBlaze
+# PI
 
 <p align="center">
   <a href="./docs/globals.md"><img src="https://img.shields.io/badge/TypeScript%20API%20Documentation-gray"></a>
@@ -13,19 +13,19 @@ That is an updated version of [com.hydroper.ftl](https://www.npmjs.com/package/c
 Install dependency:
 
 ```sh
-npm install @hydroperx/intlblaze
+npm install @hydroperx/pi
 ```
 
 Example TypeScript:
 
 ```ts
-import { IntlBlaze } from "@hydroperx/intlblaze";
+import { PI } from "@hydroperx/pi";
 
 class Main {
-    intlblaze: IntlBlaze;
+    pi: PI;
 
     constructor() {
-        this.intlblaze = new IntlBlaze({
+        this.pi = new PI({
             locales: ["en"],
             fallbacks: {
                 // "pt-BR": ["en"],
@@ -46,12 +46,12 @@ class Main {
     }
 
     async initialize() {
-        if (!(await this.intlblaze.load())) {
+        if (!(await this.pi.load())) {
             // failed to load
             return;
         }
 
-        console.log(this.intlblaze.get("hello", { to: "Diantha" }));
+        console.log(this.pi.get("hello", { to: "Diantha" }));
     }
 }
 
@@ -66,6 +66,7 @@ hello = Hello, { $to }!
 
 ## Server Usage
 
-Usually, for server applications, set the `clean` option to `false` and clone the `IntlBlaze` object when necessary by invoking `intlblaze.clone();` to change the current locale.
+Usually, for server applications, set the `clean` option to `false` and clone the `PI` object when necessary by invoking `pi.clone();` to change the current locale.
 
-The `intlblaze.clone();` method clones the `IntlBlaze` object, but still re-uses resources from the original object, avoiding resource duplication.
+
+The `pi.clone();` method clones the `PI` object, but still re-uses resources from the original object, avoiding resource duplication.
