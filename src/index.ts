@@ -3,22 +3,23 @@ import httpLoader from "./httpLoader";
 import { FluentBundle, FluentVariable } from "@fluent/bundle";
 
 /**
- * Manages Project Fluent translation lists (FTL) and translate
+ * `PI` stands for product internationalization.
+ * `PI` manages Project Fluent translation lists (FTL) and translates
  * messages.
  */
-export class IntlBlaze extends EventTarget {
+export class PI extends EventTarget {
   private _currentLocale: Intl.Locale | null = null;
 
   // Maps a locale identifier String to its equivalent path component.
   // The string mapped depends in how the
-  // IntlBlaze object was constructed. If the `locales` option
+  // PI object was constructed. If the `locales` option
   // contains "en-us", then `_localeToPathComponents.get(new Intl.Locale("en-US").toString())` returns "en-us".
   // When FTLs are loaded, this component is appended to the URL or file path;
   // for example, `"res/lang/en-us"`.
   /** @hidden */
   _localeToPathComponents: Map<string, string> = new Map();
 
-  private _status: IntlBlazeStatus = "ok";
+  private _status: PIStatus = "ok";
   private _locales: Set<string> = new Set();
   private _defaultLocale: Intl.Locale | null = null;
   private _fallbacks: Map<string, string[]> = new Map();
@@ -43,9 +44,9 @@ export class IntlBlaze extends EventTarget {
   /** @hidden */
   static _PRIVATE_CTOR: any = {};
 
-  constructor(params: IntlBlazeParams) {
+  constructor(params: PIParams) {
     super();
-    if (params === IntlBlaze._PRIVATE_CTOR) {
+    if (params === PI._PRIVATE_CTOR) {
       return;
     }
     if (typeof params !== "object") {
@@ -55,13 +56,13 @@ export class IntlBlaze extends EventTarget {
       throw new Error("params.locales must be an Array");
     }
     for (let unparsedLocale of params.locales) {
-      let parsedLocale = IntlBlaze._parseLocaleOrThrow(unparsedLocale);
+      let parsedLocale = PI._parseLocaleOrThrow(unparsedLocale);
       this._localeToPathComponents.set(parsedLocale.toString(), unparsedLocale);
       this._locales.add(parsedLocale.toString());
     }
     let fallbacks = params.fallbacks || {};
     for (let fallbackUnparsedLocale in fallbacks) {
-      let fallbackParsedLocale = IntlBlaze._parseLocaleOrThrow(
+      let fallbackParsedLocale = PI._parseLocaleOrThrow(
         fallbackUnparsedLocale,
       );
       let fallbackArray = fallbacks[fallbackUnparsedLocale];
@@ -74,14 +75,14 @@ export class IntlBlaze extends EventTarget {
           if (typeof a !== "string") {
             throw new Error("params.fallbacks object is malformed");
           }
-          return IntlBlaze._parseLocaleOrThrow(a).toString();
+          return PI._parseLocaleOrThrow(a).toString();
         }),
       );
     }
     if (typeof params.defaultLocale !== "string") {
       throw new Error("params.defaultLocale must be a String");
     }
-    this._defaultLocale = IntlBlaze._parseLocaleOrThrow(params.defaultLocale);
+    this._defaultLocale = PI._parseLocaleOrThrow(params.defaultLocale);
     if (typeof params.source !== "string") {
       throw new Error("params.source must be a String");
     }
@@ -101,7 +102,7 @@ export class IntlBlaze extends EventTarget {
       throw new Error('params.method must be one of ["http", "fileSystem"]');
     }
     this._method = params.method;
-  } // IntlBlaze constructor
+  } // PI constructor
 
   /**
    * Adds a bundle initializer. This allows defining custom functions and more.
@@ -112,7 +113,7 @@ export class IntlBlaze extends EventTarget {
 
   /**
    * Returns a set of supported locales, reflecting
-   * the ones that were specified when constructing the `IntlBlaze` object.
+   * the ones that were specified when constructing the `PI` object.
    */
   get locales(): Set<Intl.Locale> {
     let r: Set<Intl.Locale> = new Set();
@@ -124,7 +125,7 @@ export class IntlBlaze extends EventTarget {
 
   /**
    * Returns `true` if the locale is one of the supported locales
-   * that were specified when constructing the `IntlBlaze` object,
+   * that were specified when constructing the `PI` object,
    * otherwise `false`.
    */
   supportsLocale(argument: Intl.Locale | string): boolean {
@@ -163,10 +164,10 @@ export class IntlBlaze extends EventTarget {
   }
 
   /**
-   * Returns the status of the `IntlBlaze` instance
+   * Returns the status of the `PI` instance
    * (e.g., `"ok"`, `"loading"` or `"error"`).
    */
-  get status(): IntlBlazeStatus {
+  get status(): PIStatus {
     return this._status;
   }
 
@@ -352,9 +353,9 @@ export class IntlBlaze extends EventTarget {
   /**
    * Shortcut for the `addEventListener()` method.
    */
-  public on<T extends keyof IntlBlazeEventMap>(
+  public on<T extends keyof PIEventMap>(
     type: T,
-    listener: (event: (IntlBlazeEventMap[T] extends Event ? IntlBlazeEventMap[T] : never)) => void,
+    listener: (event: (PIEventMap[T] extends Event ? PIEventMap[T] : never)) => void,
     params?: boolean | AddEventListenerOptions,
   ): void;
   public on(type: string, listener: Function, params?: boolean | AddEventListenerOptions): void;
@@ -366,9 +367,9 @@ export class IntlBlaze extends EventTarget {
   /**
    * Shortcut for the `removeEventListener()` method.
    */
-  public off<T extends keyof IntlBlazeEventMap>(
+  public off<T extends keyof PIEventMap>(
     type: T,
-    listener: (event: (IntlBlazeEventMap[T] extends Event ? IntlBlazeEventMap[T] : never)) => void,
+    listener: (event: (PIEventMap[T] extends Event ? PIEventMap[T] : never)) => void,
     params?: boolean | EventListenerOptions,
   ): void;
   public off(type: string, listener: Function, params?: boolean | EventListenerOptions): void;
@@ -378,11 +379,11 @@ export class IntlBlaze extends EventTarget {
   }
 
   /**
-   * Clones the `IntlBlaze` object, but returning an object that is
-   * in sync with the original `IntlBlaze` object.
+   * Clones the `PI` object, but returning an object that is
+   * in sync with the original `PI` object.
    */
-  clone(): IntlBlaze {
-    let r = new IntlBlaze(IntlBlaze._PRIVATE_CTOR);
+  clone(): PI {
+    let r = new PI(PI._PRIVATE_CTOR);
     r._currentLocale = this._currentLocale;
     r._localeToPathComponents = this._localeToPathComponents;
     r._locales = this._locales;
@@ -398,7 +399,7 @@ export class IntlBlaze extends EventTarget {
   }
 }
 
-export type IntlBlazeParams = {
+export type PIParams = {
   locales: string[];
   fallbacks?: Record<string, string[]>;
   defaultLocale: string;
@@ -419,14 +420,14 @@ export type BundleInitializer = (
 ) => void;
 
 /**
- * Represents the current status of a `IntlBlaze` instance.
+ * Represents the current status of a `PI` instance.
  */
-export type IntlBlazeStatus = "ok" | "loading" | "error";
+export type PIStatus = "ok" | "loading" | "error";
 
 /**
- * Event types dispatched by `IntlBlaze`.
+ * Event types dispatched by `PI`.
  */
-export type IntlBlazeEventMap = {
+export type PIEventMap = {
   /**
    * Dispatched after successfully loading resources.
    */

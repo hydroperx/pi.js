@@ -6,6 +6,9 @@
     "strict": true,
     "outDir": "dist",
     "noEmit": false,
-    "declaration": true
+    "declaration": true,
+    "typeRoots": ["./node_modules/@types"],
+
+    "jsx": "react-jsx"
   }
 }

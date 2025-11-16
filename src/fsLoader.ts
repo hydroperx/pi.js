@@ -1,11 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
 import { addFTLBundleResource } from "./bundleUtils";
-import type { IntlBlaze } from ".";
+import type { PI } from ".";
 import { FluentBundle } from "@fluent/bundle";
 
 export default function loader(
-  self: IntlBlaze,
+  self: PI,
   locale: Intl.Locale,
   localeAsStr: string,
   bundle: FluentBundle,
