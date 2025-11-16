@@ -8,6 +8,6 @@
 
 > **PIStatus** = `"ok"` \| `"loading"` \| `"error"`
 
-Defined in: [src/index.ts:425](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L425)
+Defined in: [src/index.ts:428](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L428)
 
 Represents the current status of a `PI` instance.

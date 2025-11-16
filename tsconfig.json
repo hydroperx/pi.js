@@ -7,6 +7,7 @@
     "outDir": "dist",
     "noEmit": false,
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
     "typeRoots": ["./node_modules/@types"],
 
     "jsx": "react-jsx"

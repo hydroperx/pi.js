@@ -6,7 +6,7 @@
 
 # Class: PI
 
-Defined in: [src/index.ts:10](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L10)
+Defined in: [src/index.ts:10](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L10)
 
 `PI` stands for product internationalization.
 `PI` manages Project Fluent translation lists (FTL) and translates
@@ -22,7 +22,7 @@ messages.
 
 > **new PI**(`params`): `PI`
 
-Defined in: [src/index.ts:47](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L47)
+Defined in: [src/index.ts:47](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L47)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [src/index.ts:47](https://github.com/hydroperx/pi.js/blob/0b2902cfdf
 
 > **get** **currentLocale**(): `Locale` \| `null`
 
-Defined in: [src/index.ts:138](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L138)
+Defined in: [src/index.ts:138](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L138)
 
 Returns the currently loaded locale or null if none.
 
@@ -62,7 +62,7 @@ Returns the currently loaded locale or null if none.
 
 > **get** **fallbacks**(): `Locale`[]
 
-Defined in: [src/index.ts:157](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L157)
+Defined in: [src/index.ts:157](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L157)
 
 Returns the currently loaded fallbacks.
 
@@ -78,7 +78,7 @@ Returns the currently loaded fallbacks.
 
 > **get** **localeAndFallbacks**(): `Locale`[]
 
-Defined in: [src/index.ts:145](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L145)
+Defined in: [src/index.ts:145](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L145)
 
 Returns the currently loaded locale followed by its fallbacks or empty if no locale is loaded.
 
@@ -94,7 +94,7 @@ Returns the currently loaded locale followed by its fallbacks or empty if no loc
 
 > **get** **locales**(): `Set`\<`Locale`\>
 
-Defined in: [src/index.ts:118](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L118)
+Defined in: [src/index.ts:118](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L118)
 
 Returns a set of supported locales, reflecting
 the ones that were specified when constructing the `PI` object.
@@ -111,7 +111,7 @@ the ones that were specified when constructing the `PI` object.
 
 > **get** **status**(): [`PIStatus`](../type-aliases/PIStatus.md)
 
-Defined in: [src/index.ts:170](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L170)
+Defined in: [src/index.ts:170](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L170)
 
 Returns the status of the `PI` instance
 (e.g., `"ok"`, `"loading"` or `"error"`).
@@ -126,7 +126,7 @@ Returns the status of the `PI` instance
 
 > **addBundleInitializer**(`fn`): `void`
 
-Defined in: [src/index.ts:110](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L110)
+Defined in: [src/index.ts:110](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L110)
 
 Adds a bundle initializer. This allows defining custom functions and more.
 
@@ -192,7 +192,7 @@ The event listener is appended to target's event listener list and is not append
 
 > **clone**(): `PI`
 
-Defined in: [src/index.ts:385](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L385)
+Defined in: [src/index.ts:388](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L388)
 
 Clones the `PI` object, but returning an object that is
 in sync with the original `PI` object.
@@ -233,9 +233,12 @@ Dispatches a synthetic event event to target and returns true if either event's 
 
 > **get**(`id`, `args`, `errors`): `string` \| `null`
 
-Defined in: [src/index.ts:269](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L269)
+Defined in: [src/index.ts:272](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L272)
 
 Retrieves message and formats it. Returns `null` if undefined.
+
+Look at [`@fluent/bundle`](https://www.npmjs.com/package/@fluent/bundle)
+for `FluentVariable`.
 
 #### Parameters
 
@@ -261,7 +264,7 @@ Retrieves message and formats it. Returns `null` if undefined.
 
 > **has**(`id`): `boolean`
 
-Defined in: [src/index.ts:322](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L322)
+Defined in: [src/index.ts:325](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L325)
 
 Determines if a message is defined.
 
@@ -281,7 +284,7 @@ Determines if a message is defined.
 
 > **load**(`newLocale`): `Promise`\<`boolean`\>
 
-Defined in: [src/index.ts:186](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L186)
+Defined in: [src/index.ts:186](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L186)
 
 Attempts to load a locale and its fallbacks.
 If the locale argument is specified, it is loaded.
@@ -312,7 +315,7 @@ when loading is completed.
 
 > **off**\<`T`\>(`type`, `listener`, `params?`): `void`
 
-Defined in: [src/index.ts:370](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L370)
+Defined in: [src/index.ts:373](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L373)
 
 Shortcut for the `removeEventListener()` method.
 
@@ -344,7 +347,7 @@ Shortcut for the `removeEventListener()` method.
 
 > **off**(`type`, `listener`, `params?`): `void`
 
-Defined in: [src/index.ts:375](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L375)
+Defined in: [src/index.ts:378](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L378)
 
 Shortcut for the `removeEventListener()` method.
 
@@ -374,7 +377,7 @@ Shortcut for the `removeEventListener()` method.
 
 > **on**\<`T`\>(`type`, `listener`, `params?`): `void`
 
-Defined in: [src/index.ts:356](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L356)
+Defined in: [src/index.ts:359](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L359)
 
 Shortcut for the `addEventListener()` method.
 
@@ -406,7 +409,7 @@ Shortcut for the `addEventListener()` method.
 
 > **on**(`type`, `listener`, `params?`): `void`
 
-Defined in: [src/index.ts:361](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L361)
+Defined in: [src/index.ts:364](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L364)
 
 Shortcut for the `addEventListener()` method.
 
@@ -468,7 +471,7 @@ Removes the event listener in target's event listener list with the same type, c
 
 > **supportsLocale**(`argument`): `boolean`
 
-Defined in: [src/index.ts:131](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L131)
+Defined in: [src/index.ts:131](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L131)
 
 Returns `true` if the locale is one of the supported locales
 that were specified when constructing the `PI` object,

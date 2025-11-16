@@ -8,7 +8,7 @@
 
 > **PIParams** = `object`
 
-Defined in: [src/index.ts:402](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L402)
+Defined in: [src/index.ts:405](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L405)
 
 ## Properties
 
@@ -16,7 +16,7 @@ Defined in: [src/index.ts:402](https://github.com/hydroperx/pi.js/blob/0b2902cfd
 
 > **clean**: `boolean`
 
-Defined in: [src/index.ts:413](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L413)
+Defined in: [src/index.ts:416](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L416)
 
 Whether to automatically clean unused assets or not. Setting this to `false` is ideal for servers.
 
@@ -32,7 +32,7 @@ false
 
 > **defaultLocale**: `string`
 
-Defined in: [src/index.ts:405](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L405)
+Defined in: [src/index.ts:408](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L408)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/index.ts:405](https://github.com/hydroperx/pi.js/blob/0b2902cfd
 
 > `optional` **fallbacks**: `Record`\<`string`, `string`[]\>
 
-Defined in: [src/index.ts:404](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L404)
+Defined in: [src/index.ts:407](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L407)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/index.ts:404](https://github.com/hydroperx/pi.js/blob/0b2902cfd
 
 > **files**: `string`[]
 
-Defined in: [src/index.ts:407](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L407)
+Defined in: [src/index.ts:410](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L410)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/index.ts:407](https://github.com/hydroperx/pi.js/blob/0b2902cfd
 
 > **locales**: `string`[]
 
-Defined in: [src/index.ts:403](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L403)
+Defined in: [src/index.ts:406](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L406)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/index.ts:403](https://github.com/hydroperx/pi.js/blob/0b2902cfd
 
 > **method**: `"http"` \| `"fileSystem"`
 
-Defined in: [src/index.ts:414](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L414)
+Defined in: [src/index.ts:417](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L417)
 
 ***
 
@@ -72,4 +72,4 @@ Defined in: [src/index.ts:414](https://github.com/hydroperx/pi.js/blob/0b2902cfd
 
 > **source**: `string`
 
-Defined in: [src/index.ts:406](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L406)
+Defined in: [src/index.ts:409](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L409)

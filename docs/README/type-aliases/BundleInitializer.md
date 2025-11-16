@@ -8,7 +8,7 @@
 
 > **BundleInitializer** = (`locale`, `bundle`) => `void`
 
-Defined in: [src/index.ts:417](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L417)
+Defined in: [src/index.ts:420](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L420)
 
 ## Parameters
 

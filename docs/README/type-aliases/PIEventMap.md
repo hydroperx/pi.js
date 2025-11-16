@@ -8,7 +8,7 @@
 
 > **PIEventMap** = `object`
 
-Defined in: [src/index.ts:430](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L430)
+Defined in: [src/index.ts:433](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L433)
 
 Event types dispatched by `PI`.
 
@@ -18,7 +18,7 @@ Event types dispatched by `PI`.
 
 > **error**: `Event`
 
-Defined in: [src/index.ts:438](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L438)
+Defined in: [src/index.ts:441](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L441)
 
 Dispatched after failing to load resources.
 
@@ -28,6 +28,6 @@ Dispatched after failing to load resources.
 
 > **load**: `Event`
 
-Defined in: [src/index.ts:434](https://github.com/hydroperx/pi.js/blob/0b2902cfdf1decfacb1fa5b6e092b0230252d9cf/src/index.ts#L434)
+Defined in: [src/index.ts:437](https://github.com/hydroperx/pi.js/blob/d465d3fb87289907ebdaa3e89bf8ff899785ee98/src/index.ts#L437)
 
 Dispatched after successfully loading resources.

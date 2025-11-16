@@ -265,6 +265,9 @@ export class PI extends EventTarget {
 
   /**
    * Retrieves message and formats it. Returns `null` if undefined.
+   * 
+   * Look at [`@fluent/bundle`](https://www.npmjs.com/package/@fluent/bundle)
+   * for `FluentVariable`.
    */
   get(
     id: string,
