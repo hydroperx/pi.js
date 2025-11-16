@@ -1,14 +1,15 @@
 # PI
 
-<p align="center">
-  <a href="./docs/README.md"><img src="https://img.shields.io/badge/TypeScript%20API%20Documentation-gray"></a>
-</p>
-
 Rapidly support [Project Fluent](https://projectfluent.org) translation in your web application. Both client-side and server-side applications are supported.
 
 This package depends on `@fluent/bundle`.
 
 > **Note:** That is an updated version of [com.hydroper.ftl](https://www.npmjs.com/package/com.hydroper.ftl).
+
+## API documentation
+
+- [`@hydroperx/pi`](./docs/README.md)
+- [`@hydroperx/pi/react`](./docs/react/README.md)
 
 ## Getting Started
 
