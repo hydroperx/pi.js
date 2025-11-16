@@ -63,14 +63,20 @@ export class PILayer {
     args: undefined | Record<string, FluentVariable> = undefined,
     errors: null | Error[] = null,
   ): string | null {
-    return this.pi.get(id, args, errors);
+    if (!this.pi) {
+      return null;
+    }
+    return this.pi!.get(id, args, errors);
   }
 
   /**
    * Determines if a message is defined.
    */
   has(id: string): boolean {
-    return this.pi.has(id);
+    if (!this.pi) {
+      return false;
+    }
+    return this.pi!.has(id);
   }
 }
 
