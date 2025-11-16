@@ -113,7 +113,7 @@ function Application(): undefined | React.ReactNode {
 
     return (
         pi_status == "ok" ?
-            <PIProvider layer={new PILayer()}>
+            <PIProvider layer={new PILayer(pi)}>
                 <Consumer/>
             </PIProvider> : undefined
     );
